@@ -1,0 +1,14 @@
+<header style="display: flex; justify-content: space-between; align-items: center; padding: 20px 30px;">
+  <a href="{{ .Site.Home.RelPermalink }}" style="font-size: 1.1rem; font-weight: 500; text-decoration: none; color: inherit;">
+    Oliver Yee
+  </a>
+  <nav>
+    <ul style="list-style: none; display: flex; gap: 24px; margin: 0; padding: 0;">
+      <li><a href="{{ .Site.Home.RelPermalink }}" style="text-decoration: none; color: inherit;">Home</a></li>
+      <li><a href="{{ .Site.Home.RelPermalink }}work/" style="text-decoration: none; color: inherit;">Work</a></li>
+      <li><a href="{{ .Site.Home.RelPermalink }}about/" style="text-decoration: none; color: inherit;">About Me</a></li>
+      <li><a href="{{ .Site.Home.RelPermalink }}contact/" style="text-decoration: none; color: inherit;">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+{{ partial "menu.html" . }}
