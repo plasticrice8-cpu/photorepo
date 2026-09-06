@@ -8,7 +8,7 @@ theme = "hugo-theme-gallery"
   imageCount = true
   thumbWidth = 1200
   sortBy = "Date"
-  sortOrder = "asc"
+  sortOrder = "dsc"
   noSiteTitle = true
 
 [markup]
