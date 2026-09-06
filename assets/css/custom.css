@@ -41,3 +41,8 @@ width: 80%;
 margin: 0 auto;
 grid-template-columns: 1fr !important;
 }
+
+body {
+font-weight: 400;
+color: rgb(142, 135, 129);
+}
