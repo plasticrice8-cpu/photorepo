@@ -48,3 +48,8 @@ font-weight: 400 !important;
 color: rgb(142, 135, 129) !important;
 }
 
+@media (min-width: 640px) {
+    body>header {
+        margin-bottom: 0rem;
+    }
+}
