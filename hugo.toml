@@ -1,6 +1,6 @@
 baseURL = "https://plasticrice8-cpu.github.io/photorepo/"
 languageCode = "en-us"
-title = "Oli | Photos"
+title = "Oliver Yee"
 theme = "hugo-theme-gallery"
 
 [params]
