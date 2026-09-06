@@ -37,7 +37,7 @@ display: none;
 }
 
 .galleries {
-width: 80%
+width: 80%;
 margin: 0 auto;
 grid-template-columns: 1fr !important;
 }
