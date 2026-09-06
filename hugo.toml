@@ -6,7 +6,7 @@ theme = "hugo-theme-gallery"
 [params]
   description = "Photography"
   imageCount = true
-  thumbwidth = 1200
+  thumbWidth = 1200
 
 [markup]
   [markup.goldmark]
