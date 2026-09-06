@@ -1,0 +1,13 @@
+baseURL = "https://plasticrice8-cpu.github.io/photorepo/"
+languageCode = "en-us"
+title = "Oli | Photos"
+theme = "hugo-theme-gallery"
+
+[params]
+  description = "Photography"
+  imageCount = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
