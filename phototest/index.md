@@ -1,3 +1,3 @@
-title: "Your Gallery Title"
+title: "Gallery"
 
 date: 2024-01-01
