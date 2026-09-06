@@ -40,9 +40,11 @@ display: none;
 width: 80%;
 margin: 0 auto;
 grid-template-columns: 1fr !important;
+max-width: 600px;
 }
 
 header a {
 font-weight: 400 !important;
 color: rgb(142, 135, 129) !important;
 }
+
