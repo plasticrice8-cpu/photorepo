@@ -9,6 +9,7 @@ theme = "hugo-theme-gallery"
   thumbWidth = 1200
   sortBy = "Name"
   sortOrder = "asc"
+  noSiteTitle = true
 
 [markup]
   [markup.goldmark]
