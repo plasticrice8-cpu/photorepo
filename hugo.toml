@@ -7,7 +7,7 @@ theme = "hugo-theme-gallery"
   description = "Photography"
   imageCount = true
   thumbWidth = 1200
-  sortBy = "Name"
+  sortBy = "Date"
   sortOrder = "asc"
   noSiteTitle = true
 
