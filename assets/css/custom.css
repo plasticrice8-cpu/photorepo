@@ -3,6 +3,7 @@
 }
 
 .card figure {
+aspect-ratio: unset !important;
   overflow: hidden;
   margin: 0;
   border-radius: 0;
