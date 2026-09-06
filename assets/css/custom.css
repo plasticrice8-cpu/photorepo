@@ -30,3 +30,14 @@ height: auto;
 hgroup h1 {
 display: none;
 }
+
+/* hide gallery thumbnail title card */
+.card>div {
+    display: none;
+}
+
+.galleries {
+width: 80%
+margin: 0 auto;
+grid-template-columns: 1fr !important;
+}
