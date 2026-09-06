@@ -43,6 +43,6 @@ grid-template-columns: 1fr !important;
 }
 
 body {
-font-weight: 300;
-color: rgb(142, 135, 129);
+font-weight: 400 !important;
+color: rgb(142, 135, 129) !important;
 }
