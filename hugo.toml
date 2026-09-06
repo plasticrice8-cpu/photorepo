@@ -7,6 +7,8 @@ theme = "hugo-theme-gallery"
   description = "Photography"
   imageCount = true
   thumbWidth = 1200
+  sortBy = "Name"
+  sortOrder = "asc"
 
 [markup]
   [markup.goldmark]
