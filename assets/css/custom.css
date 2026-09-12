@@ -54,6 +54,12 @@ color: rgb(142, 135, 129) !important;
     }
 }
 
+/* header z-index */
+header {
+  position: relative;
+  z-index: 100;
+}
+
 /* drop down menu */
 .work-dropdown {
   position: relative;
@@ -69,6 +75,7 @@ color: rgb(142, 135, 129) !important;
   padding: 12px 0 8px 0;
   min-width: 140px;
   background: #000;
+  z-index: 100;
 }
 
 .work-dropdown:hover .work-dropdown-menu {
