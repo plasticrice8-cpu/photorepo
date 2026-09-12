@@ -55,13 +55,17 @@ color: rgb(142, 135, 129) !important;
 }
 
 /* drop down menu */
+.work-dropdown {
+  position: relative;
+}
+
 .work-dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   list-style: none;
-  margin: 2;
+  margin: 0;
   padding: 12px 0 8px 0;
   min-width: 140px;
   background: #000;
@@ -77,6 +81,6 @@ color: rgb(142, 135, 129) !important;
 
 .work-dropdown-menu a {
   text-decoration: none;
-  color: #fff;
+  color: #fff !important;
   white-space: nowrap;
 }
