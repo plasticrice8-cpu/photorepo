@@ -122,3 +122,13 @@ header nav a.nav-active,
     padding: 20px 24px !important;
   }
 }
+
+/* make page title same font size as nav menu */
+header nav a,
+.work-dropdown span {
+  font-size: 1rem;
+}
+
+hgroup h1 {
+  font-size: 1rem !important;
+}
