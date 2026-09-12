@@ -10,7 +10,7 @@
     <ul style="list-style: none; display: flex; gap: 24px; margin: 0; padding: 0;">
       <li><a href="{{ $home }}" style="text-decoration: none;" class="{{ if .IsHome }}nav-active{{ end }}">Home</a></li>
       <li class="work-dropdown">
-        <span style="cursor: default;" class="{{ if $workActive }}nav-active{{ end }}">Work</span>
+        <span style="cursor: default;" class="{{ if $workActive }}nav-active{{ end }}">Work [{{ $section }}]</span>
         <ul class="work-dropdown-menu">
           <li><a href="{{ $home }}recent/">Recent</a></li>
           <li><a href="{{ $home }}colour/">Colour</a></li>
