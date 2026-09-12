@@ -139,3 +139,9 @@ hgroup h1 {
   font-size: 1rem !important;
   color: rgb(142, 135, 129) !important;
 }
+
+/* style contact form */
+element.style {
+    padding: 5px;
+    border: 0px solid #ccc;
+}
