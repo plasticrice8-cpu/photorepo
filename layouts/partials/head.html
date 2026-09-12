@@ -36,4 +36,13 @@
   {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
   <script src="{{ $js.RelPermalink }}" defer></script>
   {{- partial "head-custom.html" . -}}
+  {{ $home := .Site.Home.RelPermalink }}
+  {{ $galleryActive := or (eq .RelPermalink (printf "%srecent/" $home)) (eq .RelPermalink (printf "%scolour/" $home)) (eq .RelPermalink (printf "%smonochrome/" $home)) (eq .RelPermalink (printf "%sportraiture/" $home)) }}
+  {{ if $galleryActive }}
+    <style>
+      hgroup h1 {
+        display: block !important;
+      }
+    </style>
+  {{ end }}
 </head>
