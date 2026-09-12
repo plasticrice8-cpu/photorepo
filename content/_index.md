@@ -1,3 +1,3 @@
 ---
-title: "Oli | Photos"
+title: "Oliver Yee"
 ---
