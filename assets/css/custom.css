@@ -92,6 +92,11 @@ header {
   white-space: nowrap;
 }
 
-.nav-active {
+.work-dropdown span {
+  color: rgb(142, 135, 129) !important;
+}
+
+header nav a.nav-active,
+.work-dropdown span.nav-active {
   color: #fff !important;
 }
