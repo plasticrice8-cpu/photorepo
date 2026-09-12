@@ -1,7 +1,5 @@
 {{ $home := .Site.Home.RelPermalink }}
-{{ $section := .Section }}
-{{ $workSections := slice "recent" "colour" "monochrome" "portraiture" }}
-{{ $workActive := in $workSections $section }}
+{{ $workActive := or (eq .RelPermalink (printf "%srecent/" $home)) (eq .RelPermalink (printf "%scolour/" $home)) (eq .RelPermalink (printf "%smonochrome/" $home)) (eq .RelPermalink (printf "%sportraiture/" $home)) }}
 <header style="display: flex; justify-content: space-between; align-items: center; padding: 25px 60px;">
   <a href="{{ $home }}" style="font-size: 1.1rem; text-decoration: none;">
     Oliver Yee
@@ -10,7 +8,7 @@
     <ul style="list-style: none; display: flex; gap: 24px; margin: 0; padding: 0;">
       <li><a href="{{ $home }}" style="text-decoration: none;" class="{{ if .IsHome }}nav-active{{ end }}">Home</a></li>
       <li class="work-dropdown">
-        <span style="cursor: default;" class="{{ if $workActive }}nav-active{{ end }}">Work [{{ $section }}]</span>
+        <span style="cursor: default;" class="{{ if $workActive }}nav-active{{ end }}">Work</span>
         <ul class="work-dropdown-menu">
           <li><a href="{{ $home }}recent/">Recent</a></li>
           <li><a href="{{ $home }}colour/">Colour</a></li>
