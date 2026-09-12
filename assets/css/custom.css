@@ -74,10 +74,16 @@ header {
   margin: 0;
   padding: 12px 0 8px 0;
   min-width: 140px;
-  background: #858585;
+  background: #fff;
+  border: 1px solid rgb(142, 135, 129);
   z-index: 100;
 }
 
+@media (prefers-color-scheme: dark) {
+  .work-dropdown-menu {
+    background: #000;
+  }
+}
 .work-dropdown:hover .work-dropdown-menu {
   display: block;
 }
@@ -88,7 +94,7 @@ header {
 
 .work-dropdown-menu a {
   text-decoration: none;
-  color: #fff !important;
+  color: rgb(142, 135, 129) !important;
   white-space: nowrap;
 }
 
