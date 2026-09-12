@@ -1,21 +1,25 @@
+{{ $home := .Site.Home.RelPermalink }}
+{{ $section := .Section }}
+{{ $workSections := slice "recent" "colour" "monochrome" "portraiture" }}
+{{ $workActive := in $workSections $section }}
 <header style="display: flex; justify-content: space-between; align-items: center; padding: 25px 60px;">
-  <a href="{{ .Site.Home.RelPermalink }}" style="font-size: 1.1rem; text-decoration: none;">
+  <a href="{{ $home }}" style="font-size: 1.1rem; text-decoration: none;">
     Oliver Yee
   </a>
   <nav>
     <ul style="list-style: none; display: flex; gap: 24px; margin: 0; padding: 0;">
-      <li><a href="{{ .Site.Home.RelPermalink }}" style="text-decoration: none; color: inherit;">Home</a></li>
+      <li><a href="{{ $home }}" style="text-decoration: none;" class="{{ if .IsHome }}nav-active{{ end }}">Home</a></li>
       <li class="work-dropdown">
-        <span style="cursor: default;">Work</span>
+        <span style="cursor: default;" class="{{ if $workActive }}nav-active{{ end }}">Work</span>
         <ul class="work-dropdown-menu">
-          <li><a href="{{ .Site.Home.RelPermalink }}recent/">Recent</a></li>
-          <li><a href="{{ .Site.Home.RelPermalink }}colour/">Colour</a></li>
-          <li><a href="{{ .Site.Home.RelPermalink }}monochrome/">Monochrome</a></li>
-          <li><a href="{{ .Site.Home.RelPermalink }}portraiture/">Portraiture</a></li>
+          <li><a href="{{ $home }}recent/">Recent</a></li>
+          <li><a href="{{ $home }}colour/">Colour</a></li>
+          <li><a href="{{ $home }}monochrome/">Monochrome</a></li>
+          <li><a href="{{ $home }}portraiture/">Portraiture</a></li>
         </ul>
       </li>
-      <li><a href="{{ .Site.Home.RelPermalink }}about/" style="text-decoration: none; color: inherit;">About Me</a></li>
-      <li><a href="{{ .Site.Home.RelPermalink }}contact/" style="text-decoration: none; color: inherit;">Contact</a></li>
+      <li><a href="{{ $home }}about/" style="text-decoration: none;" class="{{ if eq .RelPermalink (printf "%sabout/" $home) }}nav-active{{ end }}">About Me</a></li>
+      <li><a href="{{ $home }}contact/" style="text-decoration: none;" class="{{ if eq .RelPermalink (printf "%scontact/" $home) }}nav-active{{ end }}">Contact</a></li>
     </ul>
   </nav>
 </header>
