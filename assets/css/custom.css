@@ -53,3 +53,35 @@ color: rgb(142, 135, 129) !important;
         margin-bottom: 0rem;
     }
 }
+
+/* drop down menu */
+.work-dropdown {
+  position: relative;
+}
+
+.work-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 8px 0;
+  min-width: 140px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.work-dropdown:hover .work-dropdown-menu {
+  display: block;
+}
+
+.work-dropdown-menu li {
+  padding: 6px 16px;
+}
+
+.work-dropdown-menu a {
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
