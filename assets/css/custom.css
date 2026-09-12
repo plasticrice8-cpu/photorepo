@@ -91,3 +91,7 @@ header {
   color: #fff !important;
   white-space: nowrap;
 }
+
+.nav-active {
+  color: #fff !important;
+}
