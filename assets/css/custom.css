@@ -145,3 +145,11 @@ element.style {
     padding: 5px;
     border: 0px solid #ccc;
 }
+
+/* make home screen image full width on smaller screens */
+@media (max-width: 640px) {
+  .galleries {
+    width: 100%;
+    max-width: 100%;
+  }
+}
