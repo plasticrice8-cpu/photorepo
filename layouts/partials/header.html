@@ -1,5 +1,5 @@
 {{ $home := .Site.Home.RelPermalink }}
-{{ $workActive := or (eq .RelPermalink (printf "%srecent/" $home)) (eq .RelPermalink (printf "%scolour/" $home)) (eq .RelPermalink (printf "%smonochrome/" $home)) (eq .RelPermalink (printf "%sportraiture/" $home)) }}
+{{ $workActive := or (eq .RelPermalink (printf "%scolour/" $home)) (eq .RelPermalink (printf "%smonochrome/" $home)) (eq .RelPermalink (printf "%sportraiture/" $home)) }}
 <header style="display: flex; justify-content: space-between; align-items: center; padding: 25px 60px;">
   <a href="{{ $home }}" style="font-size: 1.1rem; text-decoration: none;">
     Oliver Yee
@@ -10,7 +10,6 @@
       <li class="work-dropdown">
         <span style="cursor: default;" class="{{ if $workActive }}nav-active{{ end }}">Work</span>
         <ul class="work-dropdown-menu">
-          <li><a href="{{ $home }}recent/">Recent</a></li>
           <li><a href="{{ $home }}colour/">Colour</a></li>
           <li><a href="{{ $home }}monochrome/">Monochrome</a></li>
           <li><a href="{{ $home }}portraiture/">Portraiture</a></li>
