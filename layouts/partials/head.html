@@ -37,7 +37,7 @@
   <script src="{{ $js.RelPermalink }}" defer></script>
   {{- partial "head-custom.html" . -}}
   {{ $home := .Site.Home.RelPermalink }}
-  {{ $galleryActive := or (eq .RelPermalink (printf "%srecent/" $home)) (eq .RelPermalink (printf "%scolour/" $home)) (eq .RelPermalink (printf "%smonochrome/" $home)) (eq .RelPermalink (printf "%sportraiture/" $home)) }}
+  {{ $galleryActive := or (eq .RelPermalink (printf "%scolour/" $home)) (eq .RelPermalink (printf "%smonochrome/" $home)) (eq .RelPermalink (printf "%sportraiture/" $home)) }}
   {{ if $galleryActive }}
     <style>
       hgroup h1 {
