@@ -1,0 +1,70 @@
+{{ define "main" }}
+  {{ partial "title.html" . }}
+  <section class="galleries">
+    <a class="card" id="daily-card" href="#" title="">
+      <figure style="background-color: transparent">
+        <img id="daily-card-img" class="lazyload" alt="" />
+      </figure>
+      <div>
+        <h2 id="daily-card-title"></h2>
+        <p id="daily-card-count"></p>
+      </div>
+    </a>
+  </section>
+
+  <script id="daily-galleries-data" type="application/json">
+  [
+    {{ $categories := slice "colour" "monochrome" "portraiture" }}
+    {{ range $i, $slug := $categories }}
+      {{ if $i }},{{ end }}
+      {{ with site.GetPage $slug }}
+        {{ $images := where (.Resources.ByType "image") "Params.hidden" "ne" true }}
+        {{ $imageCount := len $images }}
+        {{ $countText := T "photoCount" ($imageCount | lang.FormatNumber 0) }}
+        {
+          "title": {{ .Title | jsonify }},
+          "permalink": {{ .RelPermalink | jsonify }},
+          "count": {{ $countText | jsonify }},
+          "photos": [
+            {{ range $j, $img := $images }}
+              {{ if $j }},{{ end }}
+              {{ $thumb := $img.Filter (slice images.AutoOrient (images.Process "fit 1200x1200")) }}
+              {
+                "src": {{ $thumb.RelPermalink | jsonify }},
+                "width": {{ $thumb.Width }},
+                "height": {{ $thumb.Height }},
+                "color": {{ (index $thumb.Colors 0 | default "transparent") | jsonify }}
+              }
+            {{ end }}
+          ]
+        }
+      {{ end }}
+    {{ end }}
+  ]
+  </script>
+
+  <script>
+    (function () {
+      var data = JSON.parse(document.getElementById('daily-galleries-data').textContent);
+      if (!data.length) return;
+      var daysSinceEpoch = Math.floor(Date.now() / 86400000);
+      var gallery = data[daysSinceEpoch % data.length];
+      if (!gallery.photos.length) return;
+      var photo = gallery.photos[daysSinceEpoch % gallery.photos.length];
+
+      var card = document.getElementById('daily-card');
+      var img = document.getElementById('daily-card-img');
+      var figure = img.parentElement;
+
+      card.href = gallery.permalink;
+      card.title = gallery.title;
+      figure.style.backgroundColor = photo.color;
+      img.src = photo.src;
+      img.width = photo.width;
+      img.height = photo.height;
+      img.alt = gallery.title;
+      document.getElementById('daily-card-title').textContent = gallery.title;
+      document.getElementById('daily-card-count').textContent = gallery.count;
+    })();
+  </script>
+{{ end }}
