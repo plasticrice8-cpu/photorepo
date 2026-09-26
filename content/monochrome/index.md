@@ -3,4 +3,6 @@ title: "Monochrome"
 date: 2024-01-01
 params:
   private: false
+  sort_by: "Date"
+  sort_order: "desc"
 ---
